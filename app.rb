@@ -50,5 +50,6 @@ class App < Sinatra::Base
     elsif @operation == "/"
       "#{@number1 / @number2}"
     end
+  end
   
 end
