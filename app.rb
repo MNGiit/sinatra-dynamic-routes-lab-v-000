@@ -24,4 +24,15 @@ class App < Sinatra::Base
     end
   end
   
+  # Accepts five words and returns a string containing all five words
+  get "/say/:word1/:word2/:word3/:word4/:word5" do
+    @word1 = params[:word1]
+    @word2 = params[:word2]
+    @word3 = params[:word3]
+    @word4 = params[:word4]
+    @word5 = params[:word5]
+    @combine = @word1 + @word2 + @word3 + @word4 + @word5
+    "#{@combine}"
+  end
+  
 end
