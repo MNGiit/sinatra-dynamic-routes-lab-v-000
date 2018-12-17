@@ -35,4 +35,20 @@ class App < Sinatra::Base
     "#{@combine}"
   end
   
+  # Accepts an operation and performs the operation on the two numbers provided
+  get "/:operation/:number1/:number2" do
+    @operation = params[:operation]
+    @number1 = params[:number1].to_i
+    @number2 = params[:number2].to_i
+    
+    if @operation == "+"
+      "#{@number1 + @number2}"
+    elsif @operation == "-"
+      "#{@number1 - @number2}"
+    elsif @operation == "*"
+      "#{@number1 * @number2}"
+    elsif @operation == "/"
+      "#{@number1 / @number2}"
+    end
+  
 end
