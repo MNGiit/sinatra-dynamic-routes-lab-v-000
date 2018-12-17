@@ -19,9 +19,11 @@ class App < Sinatra::Base
   get "/say/:number/:phrase" do
     @num = params[:number].to_i
     @say = params[:phrase]
+    @arr = []
     @num.times do |i|
-      "#{@say}"
+      @arr << @say
     end
+    "#{@arr}"
   end
   
   # Accepts five words and returns a string containing all five words
