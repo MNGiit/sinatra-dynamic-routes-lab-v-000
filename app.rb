@@ -15,4 +15,6 @@ class App < Sinatra::Base
     "#{@num * @num}"
   end
   
+  
+  
 end
